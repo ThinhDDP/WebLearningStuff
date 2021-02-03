@@ -238,23 +238,23 @@
         border-radius: 12px;
     }
     .secure{
-        padding-top: 50px;
-        display: inline-block;
-        height: 200px;
-        width: 100%;
-        background-color: black;
+
+      padding-top: 50px;
+      display: inline-block;
+      height: 200px;
+      width: 100%;
+      background-color: black;
     }
     .secure h1{
-        color:  whitesmoke;
-        display: inline;
-        padding: 80px;
-        text-align: left;
+      color:  whitesmoke;
+      display: inline;
+      padding: 90px;
+
     }
     .secure p{
-        
-        padding-left: 80px;
-        display: inline;
-        color: whitesmoke;
+      padding-left: 90px;
+      display: inline;
+      color: whitesmoke;
     }
     .simple{
       padding-top: 50px;
@@ -296,10 +296,11 @@
       justify-content: space-between;
     }
     .system{
+      color: black;
       width: 100px;
       height: 100px;
     }
     .system h2{
-      margin-left: 10px;
+      margin-left: 5px;
     }
 }
