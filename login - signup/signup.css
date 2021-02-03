@@ -1,0 +1,78 @@
+.topnav{
+    align-items: center;
+    display: flex;
+    background-color: red;
+    height: 100px;
+    width: 100%;
+    padding-left: 30px;
+  }
+  .topnav h1{
+      color: white;
+      display: inline-block;
+  }
+  .topnav svg{
+      padding: 10px;
+      color: black;
+      width: 50px;
+      height: 50px;
+  }
+
+  .topnav a button{
+      background-color: chocolate;
+      width: 100px;
+      height: 30px;
+      border-radius: 30px;
+      margin-left: 500px;
+  }
+
+  .topnav-nav{
+      display: flex;
+      align-items: center;
+      list-style: none;
+  }
+  .topnav-link{
+      color: white;
+      text-decoration: none;
+  }
+  .topnav-item{
+      display: flex;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+  }
+  .topnav-item:hover{
+      background-color: orange;
+  }
+
+  .button{
+      margin-left: 800px;
+  }
+
+  .signup{
+    width: 800px;
+    background-color: grey;
+    border-radius: 12px;
+    margin: auto;
+  }
+  .signup-text{
+      color: whitesmoke;
+  }
+  .center{
+      display: block;
+      text-align: center;
+  }
+  .signup input{
+      border-radius: 6px;
+      width: 500px;
+      height: 45px;
+  }
+  .signup button{
+      display: inline-block;
+      width: 250px;
+      height: 50px;
+      margin-top: 50px;
+      padding: auto;
+      margin-left: 260px;
+      
+  }
+
