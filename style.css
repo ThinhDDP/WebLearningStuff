@@ -273,4 +273,33 @@
       display: inline;
       margin-left: 1000px;
     }
+    .comfortable{
+      padding-top: 50px;
+      display: inline-block;
+      height: 300px;
+      width: 100%;
+      background-color: red;
+    }
+    .comfortable h1{
+      margin-left: 800px;
+      display: inline;
+    }
+    .comfortable p{
+      color:  black;
+      display: inline;
+      margin-left: 400px;
+    }
+    .list-system{
+      padding: 0px 400px;
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+    }
+    .system{
+      width: 100px;
+      height: 100px;
+    }
+    .system h2{
+      margin-left: 10px;
+    }
 }
