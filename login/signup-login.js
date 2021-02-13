@@ -2,16 +2,12 @@ var dom_signupUser = document.getElementById("user");
 var dom_signupPass = document.getElementById("pass");
 var dom_signupEmail = document.getElementById("email");
 var dom_signupName = document.getElementById("name");
-var dom_loginUser = document.getElementById("user-input");
-var dom_loginPass = document.getElementById("pass-input");
 var dom_signupButton = document.getElementById("signupButton");
+var dom_loginButton = document.getElementById("loginButton");
 
 var listUser = [];
 var usrObject = {};
-
-if (listUser != null){
-    localStorage.setItem("listUser", JSON.stringify(listUser));
-}
+var user;
 
 function makeid(length) {
     var result           = '';
@@ -41,6 +37,10 @@ function checkEmpty (val1, val2, val3, val4){
     return false
 }
 
+function checkData(input, check){
+    return (input == check);
+}
+
 dom_signupButton.addEventListener("click", function(event){
     event.preventDefault();
     if (checkEmpty(dom_signupEmail.value, dom_signupPass.value, dom_signupUser.value, dom_signupName.value)){
@@ -48,3 +48,8 @@ dom_signupButton.addEventListener("click", function(event){
     }
     pushItem(dom_signupUser.value, dom_signupPass.value, dom_signupEmail.value);
 });
+
+if (listUser != null){
+    localStorage.setItem("listUser", JSON.stringify(listUser));
+}
+
