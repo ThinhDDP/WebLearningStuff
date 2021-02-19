@@ -9,7 +9,6 @@ dom_loginButton.addEventListener('click', function(event){
     user = JSON.parse(localStorage.getItem('listUser'));
     for (var i = 0; i < user.length; ++i){
         if ((dom_loginUser.value == user[i].user) || (dom_loginUser.value == user[i].email)){
-            
             flag = true;
             console.log(true);
             if (dom_loginPass.value == user[i].pass){
