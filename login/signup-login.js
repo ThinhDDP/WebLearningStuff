@@ -36,10 +36,10 @@ function makekey(length){
 
 function pushItem (val1, val2, val3, val4){
     usrObject.user = val1;
-    usrObject.pass = val2;
+    usrObject.pass = CryptoJS.MD5(val2).toString(CryptoJS.enc.Hex);
     usrObject.email = val3;
-    usrObject.key = makekey(12);
     usrObject.name = val4;
+    usrObject.key = makekey(12);
     listUser.push(usrObject);
     localStorage.setItem("listUser", JSON.stringify(listUser))
     localStorage.setItem("CurrentUser", JSON.stringify(dom_signupName.value));
@@ -59,7 +59,8 @@ dom_signupButton.addEventListener("click", function(event){
         if (checkEmpty(dom_signupEmail.value, dom_signupPass.value, dom_signupUser.value, dom_signupName.value)){
             alert("Vui lòng điền đủ thông tin");
         }
-        pushItem(dom_signupUser.value, dom_signupPass.value, dom_signupEmail.value);
+        pushItem(dom_signupUser.value, dom_signupPass.value, dom_signupEmail.value, dom_signupName.value);
+        window.location.href = "../index.html"
     }
     else{
         document.getElementById("status").style.display = "block";
