@@ -43,6 +43,7 @@ function pushItem (val1, val2, val3, val4){
     listUser.push(usrObject);
     localStorage.setItem("listUser", JSON.stringify(listUser))
     localStorage.setItem("CurrentUser", JSON.stringify(dom_signupName.value));
+    localStorage.setItem("key", usrObject.key);
 }
 
 function checkEmpty (val1, val2, val3, val4){
