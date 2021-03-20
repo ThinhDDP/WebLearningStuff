@@ -333,4 +333,13 @@
       border: 2px solid black;
       border-collapse: collapse;
     }
+    tr{
+      text-align: center;
+    }
+    .input{
+      height: 100%;
+      border: 1px solid black;
+      text-align: center;
+      background-color: grey
+    }
 }
