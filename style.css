@@ -284,7 +284,7 @@ main {
 .topnav{
   padding: 0 2vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
   background-color: red;
 }
@@ -298,6 +298,6 @@ main {
 .topnav a{
   text-decoration: none;
   color: black;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-left: 3rem;
 }

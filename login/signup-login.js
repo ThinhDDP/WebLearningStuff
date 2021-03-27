@@ -5,7 +5,7 @@ var dom_signupName = document.getElementById("name");
 var dom_signupButton = document.getElementById("signupButton");
 var dom_loginButton = document.getElementById("loginButton");
 
-var listUser = [];
+var listUser;
 var usrObject = {};
 var user;
 
@@ -69,7 +69,7 @@ dom_signupButton.addEventListener("click", function(event){
     }  
 });
 
-if (listUser != null){
+if (listUser != undefined){
     localStorage.setItem("listUser", JSON.stringify(listUser));
     localStorage.setItem("CurrentUser", JSON.stringify(dom_signupName.value));
 }
