@@ -5,7 +5,7 @@ var dom_signupName = document.getElementById("name");
 var dom_signupButton = document.getElementById("signupButton");
 var dom_loginButton = document.getElementById("loginButton");
 
-var listUser;
+var listUser = [];
 var usrObject = {};
 var user;
 
@@ -60,8 +60,10 @@ dom_signupButton.addEventListener("click", function(event){
         if (checkEmpty(dom_signupEmail.value, dom_signupPass.value, dom_signupUser.value, dom_signupName.value)){
             alert("Vui lòng điền đủ thông tin");
         }
-        pushItem(dom_signupUser.value, dom_signupPass.value, dom_signupEmail.value, dom_signupName.value);
-        window.location.href = "../index.html"
+        else{
+            pushItem(dom_signupUser.value, dom_signupPass.value, dom_signupEmail.value, dom_signupName.value);
+            window.location.href = "../index.html"
+        }   
     }
     else{
         document.getElementById("status").style.display = "block";
@@ -69,7 +71,7 @@ dom_signupButton.addEventListener("click", function(event){
     }  
 });
 
-if (listUser != undefined){
+if (localStorage.getItem("listUser") != null){
     localStorage.setItem("listUser", JSON.stringify(listUser));
     localStorage.setItem("CurrentUser", JSON.stringify(dom_signupName.value));
 }
