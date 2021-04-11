@@ -7,11 +7,7 @@ var passwords = JSON.parse(localStorage.getItem(active));
 if (passwords == null){
     passwords = [];
 }
-var passObj = { //Object Template for password
-    name: '',
-    website: '',
-    pass: ''
-}
+
 
 if (temp = localStorage.getItem("key"), temp != null){
     key = temp;
@@ -23,15 +19,22 @@ else {
     }
 }
 
-console.log(passwords);
-
 document.getElementById("submit").addEventListener('click', function(event){
+    var passObj = { //Object Template for password
+        name: '',
+        website: '',
+        pass: ''
+    }
     event.preventDefault()
+    console.log(passwords);
     var encrypted = CryptoJS.AES.encrypt(dom_password.value, key).toString(); //Convert WordArray to string
     passObj.name = dom_name.value;
     passObj.website = dom_web.value;
     passObj.pass = encrypted;
+    debugger;
+    console.log(passwords);
     passwords.push(passObj);
+    console.log(passwords)
     localStorage.setItem(active, JSON.stringify(passwords)); //Saves to localstorage
     alert("Thêm mật khẩu thành công");
 })
